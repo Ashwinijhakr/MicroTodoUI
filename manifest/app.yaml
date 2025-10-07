@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/Ashwinijhakr/MicroTodoUI
     targetRevision: main       # branch or tag (HEAD means default branch)
-    path: .          # folder path inside repo where your YAMLs exist
+    path: manifest          # folder path inside repo where your YAMLs exist
 
   destination:
     server: https://kubernetes.default.svc   # In-cluster Kubernetes API
