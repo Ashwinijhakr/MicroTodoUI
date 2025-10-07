@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ash-todo-ui
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ash-todo-ui
+  template:
+    metadata:
+      name: ash-todo-ui
+      labels:
+        app: ash-todo-ui
+    spec:
+      containers:
+      - name: ash-todo-ui
+        image: acrdevtodoapp011.azurecr.io/todo-ui:v1
+        ports:
+          - containerPort: 80
+      # strategy:
+      #   type: RollingUpdate  

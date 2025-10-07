@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: todo-ui-svc
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: ash-todo-ui
+  type: LoadBalancer
+  
